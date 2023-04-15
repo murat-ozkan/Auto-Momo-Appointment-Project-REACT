@@ -7,10 +7,9 @@ import AddModal from "./AddModal";
 const MechList = ({ mechs }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  //! buradayaım
+
   const handleClick = () => {
-    handleShow();
+    setShow(true);
   };
   return (
     <>
@@ -22,27 +21,29 @@ const MechList = ({ mechs }) => {
             <Col key={mech.id}>
               <img
                 style={{
-                  width: "200px",
-                  height: "300px",
+                  width: "250px",
+                  height: "350px",
                   borderRadius: "10px",
-                  margin: "2rem",
+                  margin: "1rem",
                   marginBottom: "1rem",
                 }}
                 className="photo"
                 src={mech.img}
                 alt={mech.name}
               />
-              <h3>{mech.name}</h3>
+              <h4>{mech.name}</h4>
               <h4 style={{ color: "brown", fontStyle: "italic" }}>
                 {mech.brand}
               </h4>
-              <Button onClick={handleClick}>Book a Service</Button>
+              <Button style={{ marginBottom: "1rem" }} onClick={handleClick}>
+                Book a Service
+              </Button>
             </Col>
           ))}
         </Row>
         <hr></hr>
       </Container>
-      <AddModal show={show} handleClose={handleClose} handleShow={handleShow} />
+      <AddModal show={show} handleClose={handleClose} />
     </>
   );
 };
