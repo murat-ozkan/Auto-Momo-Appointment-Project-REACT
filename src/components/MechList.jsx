@@ -6,7 +6,6 @@ import AddModal from "./AddModal";
 
 const MechList = ({ mechs }) => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
 
   const handleClick = () => {
     setShow(true);
@@ -43,7 +42,7 @@ const MechList = ({ mechs }) => {
         </Row>
         <hr></hr>
       </Container>
-      <AddModal show={show} handleClose={handleClose} />
+      <AddModal show={show} setShow={setShow} />
     </>
   );
 };
