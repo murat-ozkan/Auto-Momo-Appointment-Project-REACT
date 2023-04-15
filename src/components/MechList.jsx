@@ -6,9 +6,8 @@ import "./MechList.css";
 const MechList = ({ mechs }) => {
   return (
     <>
-      {" "}
       <Container>
-        <h3 style={{ color: "gray" }}>Our Mechanics</h3>
+        <h2 style={{ color: "gray" }}>Our Mechanics</h2>
         <hr></hr>
         <Row>
           {mechs.map((mech) => (
@@ -25,13 +24,14 @@ const MechList = ({ mechs }) => {
                 src={mech.img}
                 alt={mech.name}
               />
-              <h2>{mech.name}</h2>
+              <h3>{mech.name}</h3>
               <h4 style={{ color: "brown", fontStyle: "italic" }}>
                 {mech.brand}
               </h4>
             </Col>
           ))}
         </Row>
+        <hr></hr>
       </Container>
     </>
   );
