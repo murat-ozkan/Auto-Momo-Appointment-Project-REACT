@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
+import "./MechList.css";
 
 const MechList = ({ mechs }) => {
   return (
@@ -25,7 +26,7 @@ const MechList = ({ mechs }) => {
                 alt={mech.name}
               />
               <h2>{mech.name}</h2>
-              <h4 style={{ color: "red", fontStyle: "italic" }}>
+              <h4 style={{ color: "brown", fontStyle: "italic" }}>
                 {mech.brand}
               </h4>
             </Col>
