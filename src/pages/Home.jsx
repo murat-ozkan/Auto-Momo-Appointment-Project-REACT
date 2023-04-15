@@ -7,7 +7,11 @@ const Home = () => {
   const [mechs, setMechs] = useState(mechanicData);
   return (
     <main className="text-center mt-2">
-      <h1 className="display-5 text-danger">AUTO MOMO</h1>
+      <img
+        style={{ marginBottom: "2rem" }}
+        src="./img/auto-momo-logo.jpg"
+        alt="AUTO-MOMO-LOGO"
+      />
       <MechList mechs={mechs} />
       <AppointmentList mechs={mechs} />
     </main>

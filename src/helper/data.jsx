@@ -26,7 +26,7 @@ export const mechanicData = [
   {
     id: 1,
     name: "Hans Schneider",
-    brand: "Audi",
+    brand: "AUDI",
     img: "./img/audi.jpg",
   },
   {
@@ -38,37 +38,37 @@ export const mechanicData = [
   {
     id: 3,
     name: "Mario Ferrari",
-    brand: "Ferrari",
+    brand: "FERRARI",
     img: "./img/ferrari.jpg",
   },
   {
     id: 4,
     name: "Luigi Rossi",
-    brand: "Fiat",
+    brand: "FIAT",
     img: "./img/fiat.jpg",
   },
   {
     id: 5,
     name: "John Smith",
-    brand: "Ford",
+    brand: "FORD",
     img: "./img/ford.jpg",
   },
   {
     id: 6,
     name: "Pierre Dubois",
-    brand: "Peugeot",
+    brand: "PEUGEOT",
     img: "./img/peugeot.jpg",
   },
   {
     id: 7,
     name: "Sven Johansson",
-    brand: "Volvo",
+    brand: "VOLVO",
     img: "./img/volvo.jpg",
   },
   {
     id: 8,
     name: "Dieter Müller",
-    brand: "Volkswagen",
+    brand: "VOLKSWAGEN",
     img: "./img/vw.jpg",
   },
 ];
