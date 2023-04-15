@@ -1,9 +1,17 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import "./MechList.css";
+import AddModal from "./AddModal";
 
 const MechList = ({ mechs }) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  //! buradayaım
+  const handleClick = () => {
+    handleShow();
+  };
   return (
     <>
       <Container>
@@ -28,11 +36,13 @@ const MechList = ({ mechs }) => {
               <h4 style={{ color: "brown", fontStyle: "italic" }}>
                 {mech.brand}
               </h4>
+              <Button onClick={handleClick}>Book a Service</Button>
             </Col>
           ))}
         </Row>
         <hr></hr>
       </Container>
+      <AddModal show={show} handleClose={handleClose} handleShow={handleShow} />
     </>
   );
 };
