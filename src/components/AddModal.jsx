@@ -2,7 +2,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function AddModal({ show, setShow }) {
+function AddModal({ show, setShow, mechName }) {
   const handleClose = () => setShow(false);
 
   const handleSubmit = () => {};
@@ -11,7 +11,9 @@ function AddModal({ show, setShow }) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Appointment for ...</Modal.Title>
+          <Modal.Title>
+            Appointment for <span style={{ color: "red" }}>{mechName}</span>
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
