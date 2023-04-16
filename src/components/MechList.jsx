@@ -7,9 +7,11 @@ import AddModal from "./AddModal";
 const MechList = ({ mechs }) => {
   const [show, setShow] = useState(false);
   const [mechName, setMechName] = useState("");
-  const handleClick = (name) => {
+  const [brandName, setBrandName] = useState("");
+  const handleClick = (name, brand) => {
     setShow(true);
     setMechName(name);
+    setBrandName(brand);
   };
   return (
     <>
@@ -37,7 +39,7 @@ const MechList = ({ mechs }) => {
               </h4>
               <Button
                 style={{ marginBottom: "1rem" }}
-                onClick={() => handleClick(mech.name)}
+                onClick={() => handleClick(mech.name, mech.brand)}
               >
                 Book a Service
               </Button>
@@ -46,7 +48,12 @@ const MechList = ({ mechs }) => {
         </Row>
         <hr></hr>
       </Container>
-      <AddModal show={show} setShow={setShow} mechName={mechName} />
+      <AddModal
+        show={show}
+        setShow={setShow}
+        mechName={mechName}
+        brandName={brandName}
+      />
     </>
   );
 };
