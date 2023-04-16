@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 function AddModal({ show, setShow }) {
   const handleClose = () => setShow(false);
 
+  const handleSubmit = () => {};
+
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -28,11 +30,16 @@ function AddModal({ show, setShow }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+          <Button
+            variant="success"
+            type="submit"
+            onClick={handleClose}
+            onSubmit={handleSubmit}
+          >
+            Save
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="danger" onClick={handleClose}>
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
