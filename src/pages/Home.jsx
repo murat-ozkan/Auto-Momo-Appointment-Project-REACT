@@ -10,7 +10,7 @@ const Home = () => {
   const BASE_URL =
     "https://643fbe75b9e6d064befd4cf6.mockapi.io/api/appointments";
 
-  const [appointments, setAppointments] = useState("");
+  const [appointments, setAppointments] = useState([]);
 
   const getAppointments = async () => {
     try {
@@ -20,7 +20,6 @@ const Home = () => {
       console.log(error);
     }
   };
-  console.log(appointments);
 
   useEffect(() => {
     getAppointments();
@@ -34,7 +33,7 @@ const Home = () => {
         alt="AUTO-MOMO-LOGO"
       />
       <MechList mechs={mechs} />
-      <AppointmentList mechs={mechs} appointments={appointments} />
+      <AppointmentList appointments={appointments} />
     </main>
   );
 };
