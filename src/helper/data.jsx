@@ -1,21 +1,21 @@
 export const appointmentData = [
   {
     id: 1,
-    patient: "Barry Vermont",
+    customer: "Barry Vermont",
     day: new Date(),
     checked: true,
     mechanic: "Dieter Müller",
   },
   {
     id: 2,
-    patient: "Harry Coming",
+    customer: "Harry Coming",
     day: new Date(),
     checked: false,
     mechanic: "Sven Johansson",
   },
   {
     id: 3,
-    patient: "Aaron Black",
+    customer: "Aaron Black",
     day: new Date(),
     checked: true,
     mechanic: "Mario Ferrari",
